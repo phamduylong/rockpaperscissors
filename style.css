@@ -16,12 +16,12 @@ section {
     align-items: center;
 }
 .score h2 {
-    font-size: 30px;
+    font-size: 5vh;
 }
 .score p {
     text-align: center;
-    padding: 10px;
-    font-size: 25px;
+    padding: 2%;
+    font-size: 2vw;
 }
 .intro {
     color: black;
@@ -32,15 +32,15 @@ section {
     justify-content: space-around;
 }
 .intro h1 {
-    font-size: 15px;
+    font-size: 1vw;
 }
 .intro button,.match button {
-    width: 150px;
-    height: 50px;
+    width: 9vw;
+    height: 3vw;
     background: none;
     border: none;
     background-color: #b0e0b6;
-    font-size: 20px;
+    font-size: 1.5vw;
     cursor: pointer;
 }
 .match {
@@ -52,7 +52,7 @@ section {
 .winner {
     color:black;
     text-align: center;
-    font-size: 15px;
+    font-size: 2vw;
 }
 .hands, .options {
     display: flex;
@@ -62,6 +62,12 @@ section {
 .player-hand {
     transform: rotateY(180deg);
 }
+
+.player-hand, .computer-hand {
+    max-height: 100%;
+    max-width: 100%;
+}
+
 div.fadeOut {
     opacity: 0;
     pointer-events: none;
@@ -76,25 +82,25 @@ div.fadeIn {
         transform: rotateY(180deg) translateY(0px)
     }
     15% {
-        transform: rotateY(180deg) translateY(-50px);
+        transform: rotateY(180deg) translateY(-20%);
     }
     25% {
         transform: rotateY(180deg) translateY(0px)
     }
     35% {
-        transform: rotateY(180deg) translateY(-50px);
+        transform: rotateY(180deg) translateY(-20%);
     }
     50% {
         transform: rotateY(180deg) translateY(0px)
     }
     65% {
-        transform: rotateY(180deg) translateY(-50px);
+        transform: rotateY(180deg) translateY(-20%);
     }
     75% {
         transform: rotateY(180deg) translateY(0px)
     }
     85% {
-        transform: rotateY(180deg) translateY(-50px);
+        transform: rotateY(180deg) translateY(-20%);
     }
     100% {
         transform: rotateY(180deg) translateY(0px)
@@ -105,25 +111,25 @@ div.fadeIn {
         transform: translateY(0px);
     }
     15% {
-        transform: translateY(-50px);
+        transform: translateY(-20%);
     }
     25% {
         transform: translateY(0px);
     }
     35% {
-        transform: translateY(-50px);
+        transform: translateY(-20%);
     }
     50% {
         transform: translateY(0px);
     }
     65% {
-        transform: translateY(-50px);
+        transform: translateY(-20%);
     }
     75% {
         transform: translateY(0px);
     }
     85% {
-        transform: translateY(-50px);
+        transform: translateY(-20%);
     }
     100% {
         transform: translateY(0px);
@@ -132,14 +138,54 @@ div.fadeIn {
 #replay {
     margin: 0;
     position: absolute;
-    top: 75%;
+    top: 80%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    width: 150px;
-    height: 50px;
+    width: 9vw;
+    height: 3vw;
     background-color: #b0e0b6;
     border: none;
-    font-size: 20px;
+    font-size: 1.25vw;
     cursor: pointer;
+}
+
+@media screen and (orientation: portrait) {
+
+    .intro button,.match button {
+        width: 12.5vw;
+        height: 5vw;
+        background: none;
+        border: none;
+        background-color: #b0e0b6;
+        font-size: 2.5vw;
+        cursor: pointer;
+    }
+
+    #replay {
+        margin: 0;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 15vw;
+        height: 6vw;
+        background-color: #b0e0b6;
+        border: none;
+        font-size: 2.5vw;
+        cursor: pointer;
+    }
+
+    .score p {
+        text-align: center;
+        padding: 2%;
+        font-size: 6vw;
+    }
+    
+    .winner {
+        color:black;
+        text-align: center;
+        font-size: 4vw;
+    }
 }
