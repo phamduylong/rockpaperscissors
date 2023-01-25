@@ -165,7 +165,7 @@ div.fadeIn {
     #replay {
         margin: 0;
         position: absolute;
-        top: 85%;
+        top: 95%;
         left: 50%;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
